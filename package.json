@@ -1,0 +1,21 @@
+{
+  "name": "web_viewer",
+  "version": "1.0.0",
+  "description": "deployable server for viewer personal images",
+  "main": "api_secure.js",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "hapi": "^17.1.1",
+    "hapi-auth-basic": "^5.0.0",
+    "inert": "^5.0.1",
+    "log": "^1.4.0",
+    "node-debug": "^0.1.0",
+    "time-stamp": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "marty",
+  "license": "MIT"
+}

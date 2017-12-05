@@ -1,0 +1,15 @@
+FROM node:carbon
+
+WORKDIR /usr/src/app
+
+RUN apt-get update && apt-get install build-essential -y && apt-get install imagemagick ffmpeg -y && apt-get install exiftool -y
+
+COPY . .
+
+RUN npm install
+
+RUN mkdir site/images/thumbs
+
+RUN chmod 777 start.sh
+
+CMD ["./start.sh"]

@@ -1,0 +1,19 @@
+version: "3.2"
+
+volumes:
+  nrop:
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    ports:
+      - 8085:8085
+    volumes:
+      - type: volume
+        source: nrop
+        target: /usr/src/app/site/images/
+        volume:
+          nocopy: true
+      - ./logs:/usr/src/app/logs
